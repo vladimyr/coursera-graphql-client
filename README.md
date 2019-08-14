@@ -1,7 +1,7 @@
 # coursera-graphql-client 
 [![build status](https://badgen.net/travis/vladimyr/coursera-graphql-client/master)](https://travis-ci.com/vladimyr/coursera-graphql-client) <!-- [![install size](https://badgen.net/packagephobia/install/coursera-graphql-client)](https://packagephobia.now.sh/result?p=coursera-graphql-client) [![npm package version](https://badgen.net/npm/v/coursera-graphql-client)](https://npm.im/coursera-graphql-client) --> [![github license](https://badgen.net/github/license/vladimyr/coursera-graphql-client)](https://github.com/vladimyr/coursera-graphql-client/blob/master/LICENSE) [![js semistandard style](https://badgen.net/badge/code%20style/semistandard/pink)](https://github.com/Flet/semistandard)
 
->[Coursera](https://www.coursera.com) GraphQL client for nodejs
+>[Coursera](https://www.coursera.org) GraphQL client for nodejs
 
 ## Install
 
