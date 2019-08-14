@@ -14,7 +14,8 @@ const client = new ApolloClient({ link, cache });
 
 module.exports = {
   fetchCourses,
-  fetchCourseInfo
+  fetchCourseInfo,
+  fetchInstructorInfo
 };
 
 async function fetchCourses({ partner }) {
@@ -30,5 +31,13 @@ async function fetchCourseInfo({ slug }) {
   const query = require('./queries/CDPPage');
   const { data } = await client.query({ query, variables });
   const info = get(data, 'XdpV1Resource.slug.elements[0].xdpMetadata.cdpMetadata');
+  return info;
+}
+
+async function fetchInstructorInfo({ id }) {
+  const variables = { id };
+  const query = require('./queries/InstructorProfileViewer');
+  const { data } = await client.query({ query, variables });
+  const info = get(data, 'InstructorsV1Resource.get');
   return info;
 }
