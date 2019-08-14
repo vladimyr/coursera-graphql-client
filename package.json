@@ -1,0 +1,59 @@
+{
+  "name": "coursera-graphql-client",
+  "version": "0.0.0",
+  "description": "Coursera GraphQL client for nodejs",
+  "main": "index.js",
+  "bin": {
+    "coursera": "cli.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "debug": "NODE_TLS_REJECT_UNAUTHORIZED=0 http_proxy=http://localhost:8008 node --inspect-brk -r ./proxy.js cli.js"
+  },
+  "keywords": [
+    "coursera",
+    "graphql",
+    "client"
+  ],
+  "files": [
+    "cli.js",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vladimyr/coursera-graphql-client.git"
+  },
+  "author": {
+    "email": "d.vladimyr+dev@gmail.com",
+    "name": "Dario Vladovic",
+    "url": "https://github.com/vladimyr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladimyr/coursera-graphql-client/issues"
+  },
+  "homepage": "https://github.com/vladimyr/coursera-graphql-client",
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.6.3",
+    "apollo-client": "^2.6.4",
+    "apollo-link-batch-http": "^1.2.12",
+    "chalk": "^2.4.2",
+    "graphql": "^14.4.2",
+    "graphql-tag": "^2.10.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "lodash": "^4.17.15",
+    "meow": "^5.0.0",
+    "p-map": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vladimyr/eslint-config": "*",
+    "eslint": "^6.1.0",
+    "eslint-config-semistandard": "^14.0.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "global-tunnel-ng": "^2.7.1"
+  }
+}
