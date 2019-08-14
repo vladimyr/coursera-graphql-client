@@ -46,9 +46,28 @@ async function getCourseInfos(partner, { concurrency = 8 } = {}) {
   if (!partner) {
     return fail('Error: Missing required param "partner"');
   }
+  const instructors = new Map();
+  // Fetch course listing.
   let courses = await client.fetchCourses({ partner });
   courses = courses.filter(it => it.primaryLanguages.includes('en'));
-  return pMap(courses, it => client.fetchCourseInfo(it), { concurrency });
+  // Fetch course details.
+  courses = await pMap(courses, async course => {
+    const info = await client.fetchCourseInfo(course);
+    info.instructors.forEach(({ id }) => {
+      if (!instructors.has(id)) instructors.set(id, { id });
+    });
+    return info;
+  }, { concurrency });
+  // Fetch instructor details.
+  await pMap(instructors.keys(), async id => {
+    const info = await client.fetchInstructorInfo({ id });
+    instructors.set(id, info);
+  }, { concurrency });
+  // Merge course & instructor details.
+  courses.forEach(course => {
+    course.instructors = course.instructors.map(({ id }) => instructors.get(id));
+  });
+  return courses;
 }
 
 function toJSON(data) {
