@@ -53,10 +53,11 @@ async function getCourseInfos(partner, { concurrency = 8 } = {}) {
   // Fetch course details.
   courses = await pMap(courses, async course => {
     const info = await client.fetchCourseInfo(course);
-    info.instructors.forEach(({ id }) => {
+    Object.assign(course, info);
+    course.instructors.forEach(({ id }) => {
       if (!instructors.has(id)) instructors.set(id, { id });
     });
-    return info;
+    return course;
   }, { concurrency });
   // Fetch instructor details.
   await pMap(instructors.keys(), async id => {
