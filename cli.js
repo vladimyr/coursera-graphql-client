@@ -22,6 +22,10 @@ Options:
 Commands:
   list-courses  <partner>        List courses for given partner
 
+Examples:
+  # List courses from Stanford University
+  coursera list-courses stanford
+
 Homepage:     {cyan ${pkg.homepage}}
 Report issue: {cyan ${pkg.bugs.url}}`;
 

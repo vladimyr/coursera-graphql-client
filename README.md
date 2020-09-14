@@ -24,6 +24,10 @@ Options:
 Commands:
   list-courses  <partner>        List courses for given partner
 
+Examples:
+  # List courses from Stanford University
+  coursera list-courses stanford
+
 Homepage:     https://github.com/vladimyr/coursera-graphql-client
 Report issue: https://github.com/vladimyr/coursera-graphql-client/issues
 ```
