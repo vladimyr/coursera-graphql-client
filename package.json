@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "debug": "NODE_TLS_REJECT_UNAUTHORIZED=0 http_proxy=http://localhost:8008 node --inspect-brk -r ./proxy.js cli.js"
+    "debug": "http_proxy=http://localhost:9090 node --inspect-brk -r global-agent-ng/config cli.js"
   },
   "keywords": [
     "coursera",
@@ -54,6 +54,6 @@
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
-    "global-tunnel-ng": "^2.7.1"
+    "global-agent-ng": "^1.0.0"
   }
 }
