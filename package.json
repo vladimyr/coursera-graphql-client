@@ -34,26 +34,26 @@
   },
   "homepage": "https://github.com/vladimyr/coursera-graphql-client",
   "dependencies": {
-    "apollo-cache-inmemory": "^1.6.3",
-    "apollo-client": "^2.6.4",
-    "apollo-link-batch-http": "^1.2.12",
-    "chalk": "^2.4.2",
-    "graphql": "^14.4.2",
-    "graphql-tag": "^2.10.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-batch-http": "^1.2.14",
+    "chalk": "^4.1.0",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
     "isomorphic-unfetch": "^3.0.0",
-    "lodash": "^4.17.19",
-    "meow": "^5.0.0",
-    "p-map": "^3.0.0"
+    "lodash": "^4.17.20",
+    "meow": "^7.1.1",
+    "p-map": "^4.0.0"
   },
   "devDependencies": {
-    "@vladimyr/eslint-config": "*",
-    "eslint": "^6.1.0",
-    "eslint-config-semistandard": "^14.0.0",
-    "eslint-config-standard": "^13.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.1.0",
+    "@vladimyr/eslint-config": "^1.1.3",
+    "eslint": "^7.9.0",
+    "eslint-config-semistandard": "^15.0.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-standard": "^4.0.1",
     "global-agent-ng": "^1.0.0"
   }
 }
